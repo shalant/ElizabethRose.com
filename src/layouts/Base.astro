@@ -1,0 +1,42 @@
+---
+import '@fontsource/press-start-2p';
+const { title = 'Elizabeth Rose Dot Com' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="Elizabeth's website: about me, my brother Walker, and my arcade." />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --pink: #ff5d8f;
+    --pink-dark: #c93768;
+    --blue: #7cc7f5;
+    --blue-light: #d9f1ff;
+    --ink: #2b2340;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    background: var(--blue-light);
+    color: var(--ink);
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  :focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 2px;
+  }
+</style>
